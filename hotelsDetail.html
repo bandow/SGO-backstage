@@ -12,6 +12,54 @@
     <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
     <meta name="msapplication-tap-highlight" content="no">
     <link rel="stylesheet" href="styles/hotelsDetail.css">
+    <style>
+        .dropload-up,.dropload-down{
+            position: relative;
+            height: 0;
+            overflow: hidden;
+            font-size: 12px;
+            /* 开启硬件加速 */
+            -webkit-transform:translateZ(0);
+            transform:translateZ(0);
+        }
+        .dropload-refresh,.dropload-update,.dropload-load,.dropload-noData{
+            text-align: center;
+        }
+        .dropload-load .loading{
+            display: inline-block;
+            height: 15px;
+            width: 15px;
+            border-radius: 100%;
+            margin: 6px;
+            border: 2px solid #666;
+            border-bottom-color: transparent;
+            vertical-align: middle;
+            -webkit-animation: rotate 0.75s linear infinite;
+            animation: rotate 0.75s linear infinite;
+        }
+        @-webkit-keyframes rotate {
+            0% {
+                -webkit-transform: rotate(0deg);
+            }
+            50% {
+                -webkit-transform: rotate(180deg);
+            }
+            100% {
+                -webkit-transform: rotate(360deg);
+            }
+        }
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+            50% {
+                transform: rotate(180deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
     <title>酒店明细</title>
 </head>
 <body>
@@ -33,13 +81,13 @@
       </ul>
     </div>
     <div class="hotels-detail-centent">
-      <ul>
-        <li>所有酒店</li>
+      <ul class="hotels-detail-title">
+        <li class="on">所有酒店</li>
         <li>在线酒店</li>
         <li>下线酒店</li>
       </ul>
       <div class="list">
-        <div class="items">
+        <div class="items" data-id="1">
           <div class="img"><img src="images/1.jpg" alt=""></div>
           <div class="text">
             <div class="top">
@@ -52,6 +100,46 @@
             </div>
           </div>
         </div>
+        <div class="items" data-id="1">
+          <div class="img"><img src="images/1.jpg" alt=""></div>
+          <div class="text">
+            <div class="top">
+              <h2>深圳贝天使恋人龙华店</h2>
+              <p>地址：深圳市深圳市深圳市</p>
+            </div>
+            <div class="bottom">
+              <p>上线时间：2017-01-01</p>
+              <a href=""><span>在线</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="items" data-id="2">
+          <div class="img"><img src="images/1.jpg" alt=""></div>
+          <div class="text">
+            <div class="top">
+              <h2>深圳市物语主题酒店</h2>
+              <p>地址：深圳市深圳市深圳市</p>
+            </div>
+            <div class="bottom">
+              <p>上线时间：2017-01-01</p>
+              <a class="undercarriage" href=""><span>已下线</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="items" data-id="2">
+          <div class="img"><img src="images/1.jpg" alt=""></div>
+          <div class="text">
+            <div class="top">
+              <h2>深圳市物语主题酒店</h2>
+              <p>地址：深圳市深圳市深圳市</p>
+            </div>
+            <div class="bottom">
+              <p>上线时间：2017-01-01</p>
+              <a class="undercarriage" href=""><span>已下线</span></a>
+            </div>
+          </div>
+        </div>
+        <div class="dropload-load items-loading"><span class="loading"></span>加载中...</div>
       </div>
     </div>
   </div>
@@ -60,6 +148,39 @@
 <script src="scripts/flexible.js"></script>
 <script src="scripts/jquery-3.1.1.min.js"></script>
 <script>
+  $(document).ready(function(){
+    $('.hotels-detail-title li').on('click',function(){
+      $(this).addClass('on').siblings().removeClass('on');
+      var dataId=$(this).index();
+      if(dataId==0){
+        $(".hotels-detail-centent .list .items").show();
+      }else{
+        $(".hotels-detail-centent .list .items").hide();
+        $('.hotels-detail-centent .list .items[data-id="'+dataId+'"]').show();
+      }
+    });
+
+    var page=0;
+    var flag=true;
+    var windowHeight=$(window).height();
+    $(window).scroll(function() {
+        var bottomsubmit = $('.items-loading').offset().top;
+        var nowtop = $(document).scrollTop()+windowHeight;
+        console.log(bottomsubmit,nowtop);
+        if(nowtop>bottomsubmit){
+            if(flag==true){
+                flag=false;
+                $(".items-loading").show();
+                page++;
+                console.log(page);
+                setTimeout(function(){
+                    $(".items-loading").hide(); 
+                    // ajax加载第二页  定时器可以不需要的 调数据的时候定时器可以去掉
+                },5000);
+            }   
+        }
+    });
+  });
 </script>
 <!-- script end -->
 </body>
