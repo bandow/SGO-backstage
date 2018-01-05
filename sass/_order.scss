@@ -1,6 +1,6 @@
 @import 'base','common';
 .wrapper{
-	position:relative;
+	position:relative; 
 	width:100%;
 	max-width:640px;
 	min-height:100%;
@@ -10,7 +10,7 @@
 	background-size:100% auto;
 	overflow: hidden;
 	@include transform(translate(0,0));
-	@include transition(all .5s); 
+	@include transition(all .5s);
 }
 .wrapper.on{
 	height:100%;
@@ -163,23 +163,17 @@
 				border-bottom:1px solid;
 			}
 		}
-		>h3{
-			margin-top:.2rem;
-			padding:0 .3rem;
-			font:.24rem/1.5 $publicFont;
-			color:#333;	
-		}
 		.list{
-			padding:.2rem .3rem .3rem;
+			padding:.3rem;
 			background-color:#f2ebe3;
 			border-radius:10px 10px 0 0;
 			.items{
+				display:block;
 				padding:0 .2rem;
 				margin-bottom:.3rem;
-				display:block;
 				background-color:#fff;
 				border-radius:5px;
-			    overflow: hidden;
+				overflow:hidden;
 				.items-top{
 					padding:.1rem 0;
 					border-bottom:1px solid #ddd;
@@ -259,24 +253,6 @@
 				display:none;
 				font:.24rem/1.2 $publicFont;
 				color:#999;
-			}
-		}
-		.list-no-data{
-			margin-top:2rem;
-			text-align:center;
-			.img{
-				margin:0 auto .5rem;
-				width:1.52rem;
-				height:1.08rem;
-				font-size:0;
-				img{
-					width:100%;
-					height:100%;
-				}
-			}
-			p{
-				font:.24rem/1.5 $publicFont;
-				color:#999;	
 			}
 		}
 	}

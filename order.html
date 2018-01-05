@@ -11,7 +11,7 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
     <meta name="msapplication-tap-highlight" content="no">
-    <link rel="stylesheet" href="styles/userOrder.css">
+    <link rel="stylesheet" href="styles/order.css">
     <style>
         .dropload-up,.dropload-down{
             position: relative;
@@ -60,16 +60,29 @@
             }
         }
     </style>
-    <title>会员订单</title>
+    <title>订单明细</title>
 </head>
 <body>
 <div class="wrapper">
   <header class="header">
       <div class="left"><a class="arrow-left" href="javascript:window.history.back();"></a></div>
-      <div class="middle"><a href="brokerageDetail.html"><img src="images/user_order_top.png" alt=""></a></div>
+      <div class="middle"><a href="brokerageDetail.html"><img src="images/order_list_top.png" alt=""></a></div>
       <div class="right"><a href="javascript:;"><img src="images/search.png" alt=""></a></div>
   </header>
   <div class="hotels-detail">
+    <div class="hotels-detail-header">
+      <h3>订单明细</h3>
+      <ul>
+        <li>
+          <p>订单总数</p>
+          <h5>100</h5>
+        </li>
+        <li>
+           <p>订单总额</p>
+           <h5>￥110000.00</h5>
+        </li>
+      </ul>
+    </div>
     <div class="hotels-detail-centent">
       <ul class="hotels-detail-title">
         <li class="on">最近7天</li>
@@ -84,7 +97,6 @@
           </select>
         </li>
       </ul>
-      <h3>当前条件共有 50 个订单</h3>
       <div class="list">
         <a href="" class="items" data-id="1">
           <div class="items-top">
@@ -154,7 +166,7 @@
                 <h2>深圳贝尔曼大酒店</h2>
               </div>
              <div class="bottom">
-              <p>预订：2017-09-27 12:00</p>
+                <p>预订：2017-09-27 12:00</p>
                 <p>佣金：￥10</p>
                 <p><span>￥<strong>180</strong></span><span>标准大床x2</span></p>
               </div>
@@ -163,13 +175,6 @@
         </a>
         <div class="dropload-load items-loading"><span class="loading"></span>加载中...</div>
       </div>
-      <!-- 没有数据开始 -->
-      <div class="list-no-data" style="display:none;">
-        <div class="img"><img src="images/no-data.png" alt=""></div>
-        <p>没有找到相关的商品信息</p>
-        <p>请换一个关键词试试吧</p>
-      </div>
-      <!-- 没有数据结束 -->
     </div>
   </div>
 </div>
@@ -184,7 +189,28 @@
   <div class="hotels-detail">
     <div class="hotels-detail-centent">
       <div class="list">
-        <div class="items" data-id="1">
+       <a href="" class="items" data-id="1">
+          <div class="items-top">
+            <span>订单号：10001</span><span>17-09-27<em>至</em>17-09-28</span>                          
+          </div>
+          <div class="items-middle">
+            <div class="img"><img src="images/1.jpg" alt=""></div>
+            <div class="text">
+              <div class="top">
+                <h2>深圳贝尔曼大酒店</h2>
+              </div>
+              <div class="bottom">
+                <p>预订：2017-09-27 12:00</p>
+                <p>佣金：￥10</p>
+                <p><span>￥<strong>180</strong></span><span>标准大床x2</span></p>
+              </div>
+            </div>
+            <div class="fixed-img">
+              <img src="images/accomplish.png" alt="">
+            </div>
+          </div>
+        </a>
+        <a href="" class="items" data-id="1">
           <div class="items-top">
             <span>订单号：10001</span><span>17-09-27<em>至</em>17-09-28</span>                          
           </div>
@@ -201,8 +227,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="items" data-id="1">
+        </a>
+        <a href="" class="items" data-id="2">
           <div class="items-top">
             <span>订单号：10001</span><span>17-09-27<em>至</em>17-09-28</span>                          
           </div>
@@ -219,26 +245,8 @@
               </div>
             </div>
           </div>
-        </div>
-        <div class="items" data-id="2">
-          <div class="items-top">
-            <span>订单号：10001</span><span>17-09-27<em>至</em>17-09-28</span>                          
-          </div>
-          <div class="items-middle">
-            <div class="img"><img src="images/1.jpg" alt=""></div>
-            <div class="text">
-              <div class="top">
-                <h2>深圳贝尔曼大酒店</h2>
-              </div>
-              <div class="bottom">
-                <p>预订：2017-09-27 12:00</p>
-                <p>佣金：￥10</p>
-                <p><span>￥<strong>180</strong></span><span>标准大床x2</span></p>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="items" data-id="2">
+        </a>
+        <a href="" class="items" data-id="2">
           <div class="items-top">
             <span>订单号：10001</span><span>17-09-27<em>至</em>17-09-28</span>                          
           </div>
@@ -249,13 +257,13 @@
                 <h2>深圳贝尔曼大酒店</h2>
               </div>
              <div class="bottom">
-              <p>预订：2017-09-27 12:00</p>
+                <p>预订：2017-09-27 12:00</p>
                 <p>佣金：￥10</p>
                 <p><span>￥<strong>180</strong></span><span>标准大床x2</span></p>
               </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
   </div>

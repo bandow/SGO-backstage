@@ -239,30 +239,6 @@ input {
   background-color: #f2ebe3;
   background-size: 100% auto;
   overflow: hidden;
-  -moz-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.wrapper.on {
-  height: 100%;
-  -moz-transform: translate(-100%, 0);
-  -o-transform: translate(-100%, 0);
-  -ms-transform: translate(-100%, 0);
-  -webkit-transform: translate(-100%, 0);
-  transform: translate(-100%, 0);
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
 }
 
 .header {
@@ -349,271 +325,132 @@ input {
   height: 100%;
 }
 
-.hotels-detail .hotels-detail-header {
+.detail .detail-header {
+  padding: .3rem;
   background: url("../images/top_bg.jpg") no-repeat;
   background-size: 100% auto;
   font-size: 0;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
 }
-.hotels-detail .hotels-detail-header h3 {
-  padding: .3rem 0;
-  font: 0.26rem/2.4 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
+.detail .detail-header .img {
+  border: 2px solid #fff;
+  width: 1.3rem;
+  height: 1.3rem;
+  font-size: 0;
+}
+.detail .detail-header .img img {
+  width: 100%;
+  height: 100%;
+}
+.detail .detail-header .text {
+  padding: .1rem 0;
+  margin-left: .3rem;
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+}
+.detail .detail-header .text h3 {
+  font: 0.28rem/1.2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
   color: #fff;
+  margin-bottom: .2rem;
+}
+.detail .detail-header .text p {
+  font: 0.2rem/1.2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
+  color: #fff;
+}
+.detail .detail-centent .detail-flow-path {
+  padding: .3rem;
+  background-color: #fff;
+}
+.detail .detail-centent .detail-flow-path .date ul {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+}
+.detail .detail-centent .detail-flow-path .date ul li {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font: 0.22rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
+  color: #999;
   text-align: center;
 }
-.hotels-detail .hotels-detail-header h3 span {
-  margin: 0 .1rem;
-  font-size: .52rem;
+.detail .detail-centent .detail-flow-path .line {
+  margin: 5% auto;
+  width: 72%;
+  height: 3px;
+  background-color: #ccc;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  justify-content: space-between;
+}
+.detail .detail-centent .detail-flow-path .line i {
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  background-color: #ccc;
+}
+.detail .detail-centent .detail-flow-path .flow-path-text ul {
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-align-items: center;
+  align-items: center;
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  justify-content: center;
+}
+.detail .detail-centent .detail-flow-path .flow-path-text ul li {
+  -moz-box-flex: 1;
+  -webkit-box-flex: 1;
+  box-flex: 1;
+  -webkit-flex: 1;
+  flex: 1;
+  font: 0.22rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
+  color: #999;
+  text-align: center;
+}
+.detail .detail-centent .detail-info, .detail .detail-centent .detail-price, .detail .detail-centent .user-info {
+  margin-top: .2rem;
+  padding: .3rem;
+  background-color: #fff;
+}
+.detail .detail-centent .detail-info h3, .detail .detail-centent .detail-price h3, .detail .detail-centent .user-info h3 {
+  margin-bottom: .1rem;
+  font: 0.26rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
+  color: #333;
+}
+.detail .detail-centent .detail-info p, .detail .detail-centent .detail-price p, .detail .detail-centent .user-info p {
+  font: 0.22rem/1.8 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
+  color: #333;
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: flex;
+}
+.detail .detail-centent .detail-info p span:first-child, .detail .detail-centent .detail-price p span:first-child, .detail .detail-centent .user-info p span:first-child {
+  color: #999;
+  width: 20%;
+  text-align: right;
+}
+.detail .detail-centent .detail-price p span:last-child {
+  color: #f6ac1d;
   font-weight: bold;
 }
-.hotels-detail .hotels-detail-header ul {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.hotels-detail .hotels-detail-header ul li {
-  width: 50%;
-  height: .95rem;
-  background: rgba(0, 0, 0, 0.3);
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-}
-.hotels-detail .hotels-detail-header ul li:last-child {
-  border-left: 1px dashed rgba(255, 255, 255, 0.1);
-}
-.hotels-detail .hotels-detail-header ul li p {
-  font: 0.24rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
-  color: #fff;
-  text-align: center;
-}
-.hotels-detail .hotels-detail-header ul li p span {
-  margin-left: .2rem;
-  font-size: .3rem;
-}
-.hotels-detail .hotels-detail-header ul li h5 {
-  font: bold 0.3rem/1.2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
-  color: #f6ac1e;
-  text-align: center;
-}
-.hotels-detail .hotels-detail-centent ul {
-  padding-top: .2rem;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-justify-content: center;
-  -moz-justify-content: center;
-  justify-content: center;
-  -webkit-align-items: center;
-  align-items: center;
-  background-color: #fff;
-}
-.hotels-detail .hotels-detail-centent ul li {
-  -moz-box-flex: 1;
-  -webkit-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-  text-align: center;
-  font: 0.24rem/2.4 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
-  color: #666;
-  border-bottom: 1px solid #f5f5f5;
-}
-.hotels-detail .hotels-detail-centent ul li select {
-  background: none;
-  border: none;
-  outline: none;
-  -webkit-appearance: none;
-  appearance: none;
-  font: 0.24rem/2.4 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
-  color: #666;
-}
-.hotels-detail .hotels-detail-centent ul li.on {
-  color: #f6ac1d;
-  border-bottom: 1px solid;
-}
-.hotels-detail .hotels-detail-centent > h3 {
-  margin-top: .2rem;
-  padding: 0 .3rem;
-  font: 0.24rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
-  color: #333;
-}
-.hotels-detail .hotels-detail-centent .list {
-  padding: .2rem .3rem .3rem;
-  background-color: #f2ebe3;
-  border-radius: 10px 10px 0 0;
-}
-.hotels-detail .hotels-detail-centent .list .items {
-  padding: 0 .2rem;
-  margin-bottom: .3rem;
-  display: block;
-  background-color: #fff;
-  border-radius: 5px;
-  overflow: hidden;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-top {
-  padding: .1rem 0;
-  border-bottom: 1px solid #ddd;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  justify-content: space-between;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-top span {
-  font: bold 0.22rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
-  color: #999;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-middle {
-  position: relative;
-  padding: .1rem 0 .2rem;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: center;
-  align-items: center;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-middle .img {
-  width: 1.6rem;
-  height: 1.6rem;
-  font-size: 0;
-  border: 3px solid #fff;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-middle .img img {
-  width: 100%;
-  height: 100%;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-middle .text {
-  margin-left: .25rem;
-  -moz-box-flex: 1;
-  -webkit-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-flex-direction: column;
-  flex-direction: column;
-  min-height: 1.6rem;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-middle .text .top {
-  -moz-box-flex: 1;
-  -webkit-box-flex: 1;
-  box-flex: 1;
-  -webkit-flex: 1;
-  flex: 1;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-middle .text .top h2 {
-  font: bold 0.27rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
-  color: #333;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-middle .text .top p {
-  font: 0.22rem/1.2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
-  color: #999;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-middle .text .bottom p {
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-  -webkit-align-items: flex-end;
-  align-items: flex-end;
-  -webkit-justify-content: space-between;
-  -moz-justify-content: space-between;
-  justify-content: space-between;
-  font: 0.21rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
-  color: #999;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-middle .text .bottom p span:first-child {
-  color: #f6ac1d;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-middle .text .bottom p span:first-child strong {
-  font: bold 0.26rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-middle .fixed-img {
-  width: 1.52rem;
-  height: 1.26rem;
-  position: absolute;
-  top: .2rem;
-  right: -.4rem;
-  font-size: 0;
-}
-.hotels-detail .hotels-detail-centent .list .items .items-middle .fixed-img img {
-  width: 100%;
-  height: 100%;
-}
-.hotels-detail .hotels-detail-centent .list .items-loading {
-  display: none;
-  font: 0.24rem/1.2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
-  color: #999;
-}
-.hotels-detail .hotels-detail-centent .list-no-data {
-  margin-top: 2rem;
-  text-align: center;
-}
-.hotels-detail .hotels-detail-centent .list-no-data .img {
-  margin: 0 auto .5rem;
-  width: 1.52rem;
-  height: 1.08rem;
-  font-size: 0;
-}
-.hotels-detail .hotels-detail-centent .list-no-data .img img {
-  width: 100%;
-  height: 100%;
-}
-.hotels-detail .hotels-detail-centent .list-no-data p {
-  font: 0.24rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
-  color: #999;
-}
 
-.search-wrapper {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  max-width: 640px;
-  min-height: 100%;
-  height: auto;
-  margin: 0 auto;
-  background-color: #f5f5f5;
-  background-size: 100% auto;
-  overflow: auto;
-  -moz-transform: translate(100%, 0);
-  -o-transform: translate(100%, 0);
-  -ms-transform: translate(100%, 0);
-  -webkit-transform: translate(100%, 0);
-  transform: translate(100%, 0);
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-.search-wrapper.on {
-  -moz-transform: translate(0, 0);
-  -o-transform: translate(0, 0);
-  -ms-transform: translate(0, 0);
-  -webkit-transform: translate(0, 0);
-  transform: translate(0, 0);
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  -webkit-transition: all 0.5s;
-  transition: all 0.5s;
-}
-
-/*# sourceMappingURL=userOrder.css.map */
+/*# sourceMappingURL=detail.css.map */
