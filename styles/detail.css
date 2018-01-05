@@ -386,6 +386,9 @@ input {
   color: #999;
   text-align: center;
 }
+.detail .detail-centent .detail-flow-path .date ul li:nth-child(1) {
+  color: #f6ac1d;
+}
 .detail .detail-centent .detail-flow-path .line {
   margin: 5% auto;
   width: 72%;
@@ -406,6 +409,9 @@ input {
   border-radius: 100%;
   background-color: #ccc;
 }
+.detail .detail-centent .detail-flow-path .line i:nth-child(1) {
+  background-color: #f6ac1d;
+}
 .detail .detail-centent .detail-flow-path .flow-path-text ul {
   display: -moz-flex;
   display: -webkit-flex;
@@ -425,6 +431,41 @@ input {
   font: 0.22rem/1.5 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
   color: #999;
   text-align: center;
+}
+.detail .detail-centent .detail-flow-path .flow-path-text ul li:nth-child(1) {
+  color: #f6ac1d;
+}
+.detail .detail-centent .detail-flow-path1 .date ul li:nth-child(2) {
+  color: #f6ac1d;
+}
+.detail .detail-centent .detail-flow-path1 .line {
+  background-color: #ccc;
+  background: -webkit-linear-gradient(left, #f6ac1d 0%, #f6ac1d 50%, #cccccc 50%, #cccccc 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to left, #cccccc 0%, #cccccc 50%, #f6ac1d 50%, #f6ac1d 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.detail .detail-centent .detail-flow-path1 .line i:nth-child(2) {
+  background-color: #f6ac1d;
+}
+.detail .detail-centent .detail-flow-path1 .flow-path-text ul li:nth-child(2) {
+  color: #f6ac1d;
+}
+.detail .detail-centent .detail-flow-path2 .date ul li:nth-child(3) {
+  color: #f6ac1d;
+}
+.detail .detail-centent .detail-flow-path2 .line {
+  background-color: #f6ac1d;
+  background: -webkit-linear-gradient(left, #f6ac1d 0%, #f6ac1d 50%, #f6ac1d 50%, #f6ac1d 100%);
+  /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(to left, #f6ac1d 0%, #f6ac1d 50%, #f6ac1d 50%, #f6ac1d 100%);
+  /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+}
+.detail .detail-centent .detail-flow-path2 .line i:nth-child(3) {
+  background-color: #f6ac1d;
+}
+.detail .detail-centent .detail-flow-path2 .flow-path-text ul li:nth-child(3) {
+  color: #f6ac1d;
 }
 .detail .detail-centent .detail-info, .detail .detail-centent .detail-price, .detail .detail-centent .user-info {
   margin-top: .2rem;

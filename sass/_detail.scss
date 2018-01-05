@@ -127,6 +127,9 @@
 						font:.22rem/1.5 $publicFont;
 						color:#999;
 						text-align:center;
+						&:nth-child(1){
+							color:#f6ac1d;
+						}
 					}
 				}
 			}
@@ -143,6 +146,9 @@
 					height:20px;
 					border-radius:100%;
 					background-color:#ccc;
+					&:nth-child(1){
+						background-color:#f6ac1d;
+					}
 				}
 			}
 			.flow-path-text{
@@ -155,6 +161,69 @@
 						font:.22rem/1.5 $publicFont;
 						color:#999;
 						text-align:center;
+						&:nth-child(1){
+							color:#f6ac1d;
+						}
+					}
+				}
+			}
+		}
+		.detail-flow-path1{
+			.date{
+				ul{
+					li{
+						&:nth-child(2){
+							color:#f6ac1d;
+						}
+					}
+				}
+			}
+			.line{
+				background-color:#ccc;
+				background: -webkit-linear-gradient(left, #f6ac1d 0%,#f6ac1d 50%,#cccccc 50%,#cccccc 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to left, #cccccc 0%,#cccccc 50%,#f6ac1d 50%,#f6ac1d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				i{
+					&:nth-child(2){
+						background-color:#f6ac1d;
+					}
+				}
+			}
+			.flow-path-text{
+				ul{
+					li{
+						&:nth-child(2){
+							color:#f6ac1d;
+						}
+					}
+				}
+			}
+		}
+		.detail-flow-path2{
+			.date{
+				ul{
+					li{
+						&:nth-child(3){
+							color:#f6ac1d;
+						}
+					}
+				}
+			}
+			.line{
+				background-color:#f6ac1d;
+				background: -webkit-linear-gradient(left, #f6ac1d 0%,#f6ac1d 50%,#f6ac1d 50%,#f6ac1d 100%); /* Chrome10-25,Safari5.1-6 */
+				background: linear-gradient(to left, #f6ac1d 0%,#f6ac1d 50%,#f6ac1d 50%,#f6ac1d 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+				i{
+					&:nth-child(3){
+						background-color:#f6ac1d;
+					}
+				}
+			}
+			.flow-path-text{
+				ul{
+					li{
+						&:nth-child(3){
+							color:#f6ac1d;
+						}
 					}
 				}
 			}
