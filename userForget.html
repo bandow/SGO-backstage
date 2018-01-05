@@ -11,30 +11,29 @@
     <meta name="apple-mobile-web-app-status-bar-style" content="black"/>
     <meta name="format-detection" content="telephone=no, email=no,adress=no"/>
     <meta name="msapplication-tap-highlight" content="no">
-    <link rel="stylesheet" href="styles/bindingPhone.css">
-    <title>绑定手机</title>
+    <link rel="stylesheet" href="styles/userForget.css">
+    <title>修改密码</title>
 </head>
 <body>
 <div class="wrapper">
   <header class="header">
       <div class="left"><a class="arrow-left" href="javascript:window.history.back();"></a></div>
-      <div class="middle"><a href=""><img src="images/binding_top.png" alt=""></a></div>
+      <div class="middle"><a href="userForget.html"><img src="images/user_forget_top.png" alt=""></a></div>
+      <div class="right"><a href="javascript:;">完成</a></div>
   </header>
-  <div class="binding-phone">
-    <div class="items">
-      <span>15989093923</span>
-      <a href="javascript:;"><span>发送验证码</span></a>
-    </div>
-    <div class="items">
-      <input type="tel" placeholder="请输入验证码">
-    </div>
-    <div class="btn">
-      <a href="">绑定</a>
-    </div>
-    <div class="prompt">
-      <h5><i><img src="images/prompt_icon.png" alt=""></i><span>温馨提示：</span></h5>
-      <p>手机号码绑定成功后需要可使用手机号码进行登录</p>
-    </div>
+  <div class="user-forget-list">
+     <div class="items">
+       <span>旧密码</span>
+       <input type="possword" placeholder="请输入旧密码">
+     </div>
+     <div class="items">
+       <span>新密码</span>
+       <input type="possword" placeholder="请输入新密码">
+     </div>
+     <div class="items">
+        <span>确定密码</span>
+       <input type="possword" placeholder="请再次输入密码">
+     </div>
   </div>
 </div>
 <!-- script begin -->
