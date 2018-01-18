@@ -88,13 +88,7 @@
         <li class="on">最近7天</li>
         <li>当月</li>
         <li>
-          <select>
-            <option data-index="1" value="">2018/1</option>
-            <option data-index="2" value="">2018/2</option>
-            <option data-index="3" value="">2018/3</option>
-            <option data-index="4" value="">2018/4</option>
-            <option data-index="5" value="">2018/5</option>
-          </select>
+          <input class="qu-time" type="text" placeholder="选择日期">
         </li>
       </ul>
       <div class="list">
@@ -258,6 +252,7 @@
 <!-- script begin -->
 <script src="scripts/flexible.js"></script>
 <script src="scripts/jquery-3.1.1.min.js"></script>
+<script src="scripts/jquery.selector-px.js"></script>
 <script>
   $(document).ready(function(){
     $('.hotels-detail-title li').on('click',function(){
@@ -279,6 +274,25 @@
     $(".search-left").on("click",function(){
       $(".wrapper").removeClass("on");
       $(".search-wrapper").removeClass("on");
+    });
+
+    // 年
+    var spoYear = ["2017", "2018", "2019", "2020", "2021", "2022"];
+    // 月
+    var spoMonth = ["01", "02", "03", "04", "05", "06", "07", "08", "09", "10", "11", "12"];
+    // 年月
+    $.scrEvent2({
+        data: spoYear,
+        data2: spoMonth,
+        evEle: '.qu-time',
+        title: '年月',
+        defValue: 6,
+        defValue2: 0,
+        eleName: '年',
+        eleName2: '月',
+        afterAction: function (data1, data2) {
+          $('.qu-time').val(data1 + '年' + data2 + '月');
+        }
     });
 
     var page=0;

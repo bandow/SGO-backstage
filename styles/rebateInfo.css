@@ -377,5 +377,10 @@ input {
   -moz-justify-content: space-between;
   justify-content: space-between;
 }
+.rebate-info .rebate-info-bottom .items-loading {
+  display: none;
+  font: 0.24rem/1.2 -apple-system, BlinkMacSystemFont, "PingFang SC", "Helvetica Neue", "Microsoft Yahei", STHeiti, Tahoma, Simsun, sans-serif;
+  color: #999;
+}
 
 /*# sourceMappingURL=rebateInfo.css.map */

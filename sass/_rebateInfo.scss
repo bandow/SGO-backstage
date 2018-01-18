@@ -125,5 +125,10 @@
 				}
 			}
 		}
+		.items-loading{
+			display:none;
+			font:.24rem/1.2 $publicFont;
+			color:#999;
+		}
 	}
 }
