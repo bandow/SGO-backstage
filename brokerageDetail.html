@@ -66,8 +66,16 @@
 <div class="wrapper">
   <header class="header">
       <div class="left"><a class="arrow-left" href="javascript:window.history.back();"></a></div>
-      <div class="middle"><a href="brokerageDetail.html"><img src="images/brokerage_detail_top.png" alt=""></a></div>
-      <div class="right"><a href="javascript:;"><img src="images/search.png" alt=""></a></div>
+     <div class="middle">
+        <!-- <a href="brokerageDetail.html"><img src="images/user_detail_top.png" alt=""></a> -->
+        <label><input type="text" placeholder="所有酒店"></label>
+      </div>
+      <div class="right">
+        <a href="javascript:;">
+          取消
+          <!-- <img src="images/search.png" alt=""> -->
+        </a>
+      </div>
   </header>
   <div class="hotels-detail">
     <div class="hotels-detail-header">
@@ -166,7 +174,7 @@
   </div>
 </div>
 <div class="search-wrapper">
-  <header class="header">
+ <!--  <header class="header">
       <div class="left"><a class="arrow-left search-left" href="javascript:;"></a></div>
       <div class="middle">
         <div class="search"><input type="text" placeholder="所有酒店"></div>
@@ -245,9 +253,14 @@
           </div>
         </div>
         <!-- <div class="dropload-load items-loading"><span class="loading"></span>加载中...</div> -->
-      </div>
-    </div>
-  </div>
+      <!-- </div> -->
+    <!-- </div> -->
+  <!-- </div>  -->
+   <ul>
+    <li><a href=""><span>深圳市贝尔曼酒店</span><span>深圳市</span></a></li>
+    <li><a href=""><span>深圳市贝尔曼酒店</span><span>深圳市</span></a></li>
+    <li><a href=""><span>深圳市贝尔曼酒店</span><span>深圳市</span></a></li>
+  </ul>
 </div>
 <!-- script begin -->
 <script src="scripts/flexible.js"></script>
@@ -267,14 +280,26 @@
     });
 
     //点击搜索图标
-    $(".wrapper .header .right a").on("click",function(){
-      $(".wrapper").addClass("on");
-      $(".search-wrapper").addClass("on");
+    // $(".wrapper .header .right a").on("click",function(){
+    //   $(".wrapper").addClass("on");
+    //   $(".search-wrapper").addClass("on");
+    // });
+    // $(".search-left").on("click",function(){
+    //   $(".wrapper").removeClass("on");
+    //   $(".search-wrapper").removeClass("on");
+    // });
+    //点击搜索输入框
+    $(".header .middle label input").on("input",function(){
+      if($(this).val()!=""){
+        $(".search-wrapper").show();
+       }else{
+        $(".search-wrapper").hide();
+       }
     });
-    $(".search-left").on("click",function(){
-      $(".wrapper").removeClass("on");
-      $(".search-wrapper").removeClass("on");
-    });
+    $(".header .right a").on("click",function(){
+      $(".header .middle label input").val("");
+      $(".search-wrapper").hide();
+    })
 
     // 年
     var spoYear = ["2017", "2018", "2019", "2020", "2021", "2022"];
